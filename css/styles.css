@@ -57,22 +57,21 @@ ul {
     padding-left: 15px;
 }
 
-.button {
+button {
     cursor: pointer;
 }
 
-.address {
+address {
     font-style: normal;
 }
 
-.img {
+img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 .section {
     padding-bottom: 94px;
-    padding-top: 94px;
 }
 
 /* Header */
@@ -92,31 +91,24 @@ ul {
 }
 
 .page-header {
-    stroke: var(--header-stroke-color); 
-}
-
-.item {
-    margin-left: 50px;
+    border-bottom: 1px solid var(--header-stroke-color);
 }
 
 .header-connect {
     margin-left: auto;
 }
 
-
-
 /* Header-conntainer */
 .header-container{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--header-stroke-color);
-   
 }
 
 .main-nav{
     display: flex;
-    align-items: center;
+    align-items: center;  
 }
+
 .item {
    white-space: nowrap;
 }
@@ -136,6 +128,7 @@ ul {
 }
 .site-nav{
     display: flex;
+    gap: 50px;
     
 }
 
@@ -144,8 +137,11 @@ ul {
 .auth-nav .link:hover,
 .auth-nav .link:focus,
 .footer-nav .link:hover,
-.footer-nav .link:focus{
+.footer-nav .link:focus,
+.button:hover,
+.button:focus{
 color: var(--accent-color);
+background-color: var(--primary-bg-color);
 }
 
 .site-nav .link.current,
@@ -153,10 +149,10 @@ color: var(--accent-color);
 color: var(--accent-color);
 }
 
+
 /*Auth-nav*/
 
 .auth-nav .link{
-
 text-decoration: none;
 color: var(--primary-text-color);
 font-weight: 500;
@@ -170,11 +166,9 @@ letter-spacing: 0.02em;
     gap: 50px;
 }
 
-
 /* Hero */
 
 .hero-title {
-   
 width: 696px;
 color: var(--primary-white-color);
 font-weight: 900;
@@ -183,27 +177,26 @@ line-height: 1.36;
 letter-spacing: 0.06em;;
 text-transform: uppercase;
 margin-bottom: 30px;
-padding-top: 200px;
-padding-left: 252px;
+margin-left: auto;
+margin-right: auto;
 
 }
 .hero-container {
-
 text-align: center;
 justify-content: center;
-min-height: 600px;
 flex-grow: 1;
 }
+
 .hero {
   background-color: var(--accent-bg-color);  
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
-.button-primary {
-
+.button {
 min-width: 216px;
 min-height: 50px;
-color: var(--title-text-color);
 font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
@@ -223,14 +216,13 @@ background-color: var(--accent-color);
 
 /* Project */
 
-.project-title{
+.project-pre-title{
 font-weight: 700;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-text-align: center;
+text-align: justify;
 color: var(--title-text-color);
-margin-top: 20px;
 margin-bottom: 4px;
 
 }
@@ -238,26 +230,32 @@ margin-bottom: 4px;
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.03em;
-text-align: center;
 color: var(--primary-text-color);
-padding-bottom: 20px;
-
 }
+
 .project-list .link{
 text-decoration: none;
 color: var(--title-text-color);
 }
+
 .project-item{
-    stroke: var(--project-stroke-color) ;
-    width: calc((100% - 60px) / 3);
-    border-bottom: 1px solid var(--project-stroke-color);
+    
+     width: calc((100% - 60px) / 3);
+      
 }
+
 .project-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-
+   
 }
+.project-card{
+    padding: 20px 24px;
+     background-color: var(--primary-bg-color);
+     border: 1px solid var(--project-stroke-color);
+}
+
 
 
 /* Section-btn*/
@@ -269,7 +267,6 @@ color: var(--title-text-color);
     margin: -1px;
     border: 0;
     padding: 0;
-
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
@@ -290,23 +287,27 @@ cursor: pointer;
 letter-spacing: 0.03em;
 font-family: inherit;
 min-width: 73px;
-
 min-height: 38px;
 text-align: center;
 border: 1px solid transparent;
 }
+
 .btn-primary{
     background-color: var(--accent-color);
     color: var(--primary-white-color);
     padding: 6px 25px;
 }
+
 .btn-secondary{
 color: var(--title-text-color);
 background-color: var(--secondary-bg-color);
 padding: 6px 22px;
 }
+
 .btn-nav .link:hover,
-.btn-nav .link:focus{
+.btn-nav .link:focus
+.button:hover,
+.button:focus{
     color: var(--primary-white-color);
     background-color: var(--accent-color);
 }
@@ -316,34 +317,33 @@ padding: 6px 22px;
     gap: 8px;
     white-space: nowrap;
     justify-content: center;
-    margin-bottom: 34px;
-    padding: 34px;
+    padding-bottom: 50px;
+    padding-top: 94px;
 }
 
 /*Feature*/
 
-.feature-list .title {
+.feature-title {
 color: var(--title-text-color);
 font-weight: 700;
 font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
+padding-top: 94px;
 }
 
 .feature-list {
     display: flex;
     gap: 30px;
-  
 }
+
 .text-feature {
-    width: 270px;
-    min-height: 48px;
-    display: block;
    margin-top: 10px;
-   white-space: wrap;
+   line-height: 1.7;
 }
-.feature-title{
-  padding-top: 94px;  
+
+.feature-item {
+width: 270px;
 }
 
 /* Work*/
@@ -363,7 +363,7 @@ top: 931px;
 /* team */
 
 .team-title {
-margin-bottom: 50px;
+    padding-top: 94px;
 }
 
 .team-pre-title{
@@ -373,7 +373,6 @@ line-height: 1.2;
 letter-spacing: 0.03em;
 text-align: center;
 color: var(--title-text-color);
-margin-top: 30px;
 margin-bottom: 10px;
 }
 
@@ -383,31 +382,36 @@ line-height: 1.2;
 letter-spacing: 0.03em;
 text-align: center;
 color: var(--primary-text-color);
-padding-bottom: 30px;
-
 }
+
 .team {
    background-color: var(--secondary-bg-color); 
 }
+
 .team-nav {
     display: flex;
     gap: 30px;
 }
-.team-item {
-    width: calc((100% - 90px)) / 4;
+
+.team-card {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-
+.team-item {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 
 /* Footer */
 
 .logo-past{
     color: var(--primary-white-color);
-   
 }
+
 .logo-footer{
      margin-bottom: 20px;
-    padding-top: 60px;
 }
 
 .footer-nav .link{
@@ -416,18 +420,18 @@ color: var(--footer-color);
 font-style: normal;
 line-height: 1.7;
 }
+
 .address {
     color: var(--primary-white-color);
 }
 
 .footer-title {
 background-color: var(--accent-bg-color);
+padding-top: 60px;
+padding-bottom: 60px;
 }
+
 .point,
 .mail {
     margin-bottom: 9px;
-}
-
-.phone {
-    padding-bottom: 60px;
 }
